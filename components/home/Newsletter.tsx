@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Gift, Bell } from 'lucide-react'
+import { Mail, Gift, Bell, CheckCircle } from 'lucide-react'
 import toast from 'react-hot-toast'
 
 export function Newsletter() {
@@ -21,7 +21,7 @@ export function Newsletter() {
     setIsLoading(false)
     setEmail('')
     setSubscribed(true)
-    toast.success("🎉 You're subscribed! Get ready for exclusive deals.")
+    toast.success('You are subscribed! Get ready for exclusive deals.')
   }
 
   return (
@@ -31,19 +31,15 @@ export function Newsletter() {
           {/* Pattern overlay */}
           <div className="absolute inset-0 pattern-dots opacity-20" />
 
-          {/* Floating decor */}
-          <div className="absolute top-6 left-10 text-4xl animate-float pointer-events-none">🎁</div>
-          <div className="absolute top-8 right-12 text-3xl animate-float-delay pointer-events-none">✉️</div>
-          <div className="absolute bottom-6 left-16 text-3xl animate-float-delay-2 pointer-events-none">🌟</div>
-          <div className="absolute bottom-8 right-10 text-4xl animate-float pointer-events-none">🎀</div>
-
           <div className="max-w-lg mx-auto relative z-10">
             {subscribed ? (
               <div className="animate-bounce-in">
-                <div className="text-6xl mb-4">🎉</div>
-                <h2 className="font-fredoka text-3xl text-white mb-2">You're In!</h2>
+                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle size={40} className="text-white" strokeWidth={1.5} />
+                </div>
+                <h2 className="font-fredoka text-3xl text-white mb-2">You are In!</h2>
                 <p className="text-white/90 font-nunito">
-                  Welcome to the Little Threads family! Expect amazing deals in your inbox.
+                  Welcome to the Little Threads family. Expect exclusive deals in your inbox.
                 </p>
               </div>
             ) : (
@@ -52,15 +48,15 @@ export function Newsletter() {
                   <Mail size={36} className="text-white" />
                 </div>
                 <h2 className="font-fredoka text-3xl md:text-4xl text-white mb-2">
-                  Get Exclusive Deals! 🛍️
+                  Get Exclusive Deals
                 </h2>
                 <p className="text-white/90 font-nunito mb-2">
-                  Subscribe and be the first to know about new arrivals, flash sales & special offers.
+                  Subscribe and be the first to know about new arrivals, flash sales and special offers.
                 </p>
 
                 <div className="flex items-center justify-center gap-4 text-sm text-white/80 font-nunito mb-6">
                   <span className="flex items-center gap-1"><Gift size={14} /> Exclusive discounts</span>
-                  <span className="flex items-center gap-1"><Bell size={14} /> New arrivals alerts</span>
+                  <span className="flex items-center gap-1"><Bell size={14} /> New arrival alerts</span>
                 </div>
 
                 <form onSubmit={handleSubmit} className="flex gap-2 max-w-md mx-auto">
@@ -81,7 +77,7 @@ export function Newsletter() {
                   </button>
                 </form>
                 <p className="text-white/60 text-xs mt-3 font-poppins">
-                  No spam ever. Unsubscribe anytime. We promise! 🤞
+                  No spam ever. Unsubscribe anytime.
                 </p>
               </>
             )}

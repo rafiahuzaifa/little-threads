@@ -65,7 +65,7 @@ export default function ContactPage() {
   const onSubmit = async (data: ContactFormData) => {
     // Simulate send — replace with actual email API
     await new Promise((r) => setTimeout(r, 1500))
-    toast.success("Message sent! We'll get back to you within 24 hours 🎉")
+    toast.success("Message sent! We'll get back to you within 24 hours.")
     setSent(true)
     reset()
   }
@@ -74,15 +74,12 @@ export default function ContactPage() {
     <div className="min-h-screen bg-gradient-hero">
       {/* Hero */}
       <div className="relative py-16 px-4 text-center overflow-hidden">
-        <div className="absolute top-8 right-12 text-4xl animate-float pointer-events-none">💌</div>
-        <div className="absolute top-16 left-16 text-3xl animate-float-delay pointer-events-none">✨</div>
-
         <div className="container mx-auto max-w-2xl">
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-soft">
             <span className="text-sm font-nunito font-semibold text-bubblegum-500">Get in Touch</span>
           </div>
           <h1 className="font-fredoka text-4xl md:text-5xl text-charcoal mb-4">
-            We'd Love to Hear From You! 💬
+            We'd Love to Hear From You
           </h1>
           <p className="font-poppins text-gray-500">
             Questions, feedback, or just want to say hi? We're here for you.
@@ -142,8 +139,7 @@ export default function ContactPage() {
           <div className="lg:col-span-3 bg-white rounded-3xl shadow-float p-6 md:p-8">
             {sent ? (
               <div className="text-center py-12">
-                <div className="text-6xl mb-4 animate-bounce-in">🎉</div>
-                <h3 className="font-nunito font-black text-2xl text-charcoal mb-2">Message Sent!</h3>
+                  <h3 className="font-nunito font-black text-2xl text-charcoal mb-2">Message Sent!</h3>
                 <p className="text-gray-500 mb-6">We'll reply within 24 hours.</p>
                 <button
                   onClick={() => setSent(false)}

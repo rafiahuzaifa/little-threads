@@ -81,8 +81,8 @@ export function OrderSummaryPanel({
 
       {/* Trust Badges */}
       <div className="mt-4 bg-white rounded-xl p-3 text-center space-y-1">
-        <p className="text-xs text-gray-400">🔒 256-bit SSL Secured Checkout</p>
-        <p className="text-xs text-gray-400">📦 Free Returns within 7 days</p>
+        <p className="text-xs text-gray-400">256-bit SSL Secured Checkout</p>
+        <p className="text-xs text-gray-400">Free Returns within 7 days</p>
       </div>
     </div>
   )

@@ -32,21 +32,13 @@ export function HeroSlider({ banners }: HeroSliderProps) {
   if (!banners || banners.length === 0) {
     return (
       <div className="relative w-full h-[420px] md:h-[520px] bg-gradient-hero rounded-3xl overflow-hidden flex items-center justify-center pattern-dots">
-        {/* Floating decorations */}
-        <div className="absolute top-8 right-12 text-5xl animate-float pointer-events-none">🌟</div>
-        <div className="absolute top-16 right-32 text-3xl animate-float-delay pointer-events-none">🎀</div>
-        <div className="absolute bottom-12 left-16 text-4xl animate-float-delay-2 pointer-events-none">⭐</div>
-        <div className="absolute top-12 left-1/3 text-2xl animate-float-slow pointer-events-none">✨</div>
-        <div className="absolute bottom-8 right-16 text-3xl animate-float pointer-events-none">🌈</div>
-
         <div className="text-center px-6 relative z-10">
-          <div className="text-7xl mb-5 animate-bounce-in block">🧒</div>
           <h1 className="font-fredoka text-5xl md:text-7xl text-charcoal mb-4 leading-tight">
             Welcome to{' '}
             <span className="text-gradient-pink block">Little Threads</span>
           </h1>
           <p className="font-nunito text-gray-500 text-xl mb-8">
-            Adorable clothes for your little superstars ✨
+            Adorable clothes for your little superstars
           </p>
           <Link
             href="/shop"
@@ -91,17 +83,13 @@ export function HeroSlider({ banners }: HeroSliderProps) {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/25 to-transparent" />
 
-        {/* Floating emojis */}
-        <div className="absolute top-10 right-12 text-4xl animate-float pointer-events-none hidden md:block">🌟</div>
-        <div className="absolute bottom-16 right-20 text-3xl animate-float-delay pointer-events-none hidden md:block">✨</div>
-
         {/* Content */}
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto max-w-7xl px-6 md:px-12">
             <div className="max-w-xl">
               {banner.badgeText && (
                 <span className="inline-block bg-sunshine-500 text-charcoal text-sm font-nunito font-black px-5 py-1.5 rounded-full mb-5 shadow-yellow animate-bounce-in">
-                  🎉 {banner.badgeText}
+                  {banner.badgeText}
                 </span>
               )}
               <h1 className="font-fredoka text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-4 drop-shadow-sm">

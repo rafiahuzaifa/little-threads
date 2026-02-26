@@ -4,28 +4,25 @@ const PROMOS = [
   {
     title: 'New Arrivals',
     subtitle: 'Fresh styles just dropped',
-    badge: '🆕 Just In',
+    badge: 'Just In',
     href: '/shop?new=true',
     gradient: 'from-mintgreen-400 to-emerald-500',
-    emoji: '✨',
     tag: 'View All',
   },
   {
     title: 'Sale Up to 40%',
     subtitle: 'Limited time mega deals',
-    badge: '🔥 Hot Deal',
+    badge: 'Hot Deal',
     href: '/shop?sale=true',
     gradient: 'from-bubblegum-400 to-coral-500',
-    emoji: '💰',
     tag: 'Shop Sale',
   },
   {
     title: 'School Wear',
     subtitle: 'Complete uniform sets from ₨999',
-    badge: '📚 Back to School',
+    badge: 'Back to School',
     href: '/category/school-wear',
     gradient: 'from-lavender-400 to-purple-600',
-    emoji: '🎒',
     tag: 'Shop Now',
   },
 ]
@@ -42,11 +39,6 @@ export function PromoGrid() {
               className="group relative rounded-2xl overflow-hidden h-36 sm:h-44 shadow-soft hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${promo.gradient}`} />
-
-              {/* Big emoji bg */}
-              <span className="absolute -right-2 -bottom-2 text-8xl opacity-20 group-hover:scale-110 group-hover:opacity-30 transition-all duration-500">
-                {promo.emoji}
-              </span>
 
               <div className="absolute inset-0 flex flex-col justify-between p-4">
                 <span className="inline-block bg-white/25 text-white text-xs font-nunito font-bold px-2.5 py-1 rounded-full backdrop-blur-sm w-fit">

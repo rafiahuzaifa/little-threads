@@ -82,7 +82,7 @@ export default function OrderConfirmedPage() {
           </h1>
           {order && (
             <p className="text-white/90">
-              Thank you, <strong>{order.shippingAddress?.fullName}</strong>! 🎉
+              Thank you, <strong>{order.shippingAddress?.fullName}</strong>!
             </p>
           )}
         </div>
@@ -138,7 +138,7 @@ export default function OrderConfirmedPage() {
                   {order.shippingAddress?.fullName}<br />
                   {order.shippingAddress?.address}<br />
                   {order.shippingAddress?.city}, {order.shippingAddress?.province} {order.shippingAddress?.postalCode}<br />
-                  📱 {order.shippingAddress?.phone}
+                  {order.shippingAddress?.phone}
                 </p>
               </div>
 
@@ -154,7 +154,7 @@ export default function OrderConfirmedPage() {
           {method === 'Bank Transfer' && (
             <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
               <h3 className="font-nunito font-bold text-[#2D3748] mb-3">
-                🏦 Bank Transfer Details
+                Bank Transfer Details
               </h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
@@ -182,7 +182,7 @@ export default function OrderConfirmedPage() {
                 <p className="text-sm font-medium text-[#2D3748] mb-2">Upload Payment Proof</p>
                 {proofUploaded ? (
                   <div className="bg-green-50 rounded-xl p-3 text-center text-green-600 text-sm font-medium">
-                    ✅ Payment proof uploaded successfully!
+                    Payment proof uploaded successfully!
                   </div>
                 ) : (
                   <label className="flex items-center justify-center gap-2 border-2 border-dashed border-blue-300 rounded-xl p-4 cursor-pointer hover:border-blue-400 transition-colors bg-white">
@@ -211,7 +211,7 @@ export default function OrderConfirmedPage() {
           {method === 'COD' && (
             <div className="bg-green-50 rounded-xl p-4 text-center">
               <p className="text-green-700 font-medium text-sm">
-                💵 Pay ₨{order?.totalPrice?.toLocaleString('en-PK') || '...'} when your order is delivered
+                Pay ₨{order?.totalPrice?.toLocaleString('en-PK') || '...'} when your order is delivered
               </p>
             </div>
           )}

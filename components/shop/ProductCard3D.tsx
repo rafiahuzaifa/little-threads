@@ -79,7 +79,7 @@ export function ProductCard3D({ product, showQuickAdd = true }: ProductCard3DPro
       stock: product.stock,
       slug: product.slug.current,
     })
-    toast.success(`🛍️ Added to cart!`, {
+    toast.success(`Added to cart!`, {
       style: { borderRadius: '12px', background: '#FF6B9D', color: '#fff' },
       iconTheme: { primary: '#fff', secondary: '#FF6B9D' },
     })
@@ -98,7 +98,7 @@ export function ProductCard3D({ product, showQuickAdd = true }: ProductCard3DPro
       image: primaryImage,
       isSale: product.isSale,
     })
-    toast.success(inWishlist ? '💔 Removed from wishlist' : '❤️ Added to wishlist!')
+    toast.success(inWishlist ? 'Removed from wishlist' : 'Added to wishlist!')
   }
 
   return (

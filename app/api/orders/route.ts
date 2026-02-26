@@ -169,7 +169,7 @@ export async function POST(req: NextRequest) {
 
     // WhatsApp admin notification URL (logged but not called server-side)
     const adminWhatsappUrl = `https://wa.me/${process.env.ADMIN_WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      `🆕 New Order! #${orderId}\nAmount: ₨${totalPrice}\nPayment: ${paymentMethod}\nCustomer: ${shippingAddress.fullName}\nCity: ${shippingAddress.city}`
+      `New Order! #${orderId}\nAmount: Rs${totalPrice}\nPayment: ${paymentMethod}\nCustomer: ${shippingAddress.fullName}\nCity: ${shippingAddress.city}`
     )}`
 
     return NextResponse.json({

@@ -193,7 +193,7 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
             {order.shippingAddress?.fullName}<br />
             {order.shippingAddress?.address}<br />
             {order.shippingAddress?.city}, {order.shippingAddress?.province} {order.shippingAddress?.postalCode}<br />
-            📱 {order.shippingAddress?.phone}
+            {order.shippingAddress?.phone}
           </p>
         </div>
 
@@ -207,9 +207,9 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
             <div>
               <p className="text-sm text-gray-600">{order.paymentMethod}</p>
               {order.isPaid ? (
-                <p className="text-xs text-green-600 font-semibold mt-0.5">✅ Paid</p>
+                <p className="text-xs text-green-600 font-semibold mt-0.5">Paid</p>
               ) : (
-                <p className="text-xs text-amber-600 font-semibold mt-0.5">⏳ Payment Pending</p>
+                <p className="text-xs text-amber-600 font-semibold mt-0.5">Payment Pending</p>
               )}
             </div>
             <p className="font-black text-xl text-bubblegum-500">{formatPrice(order.totalPrice)}</p>

@@ -71,7 +71,6 @@ export default async function HomePage() {
           products={featuredProducts}
           title="Featured Products"
           subtitle="Our most-loved pieces, handpicked for your little ones"
-          emoji="⭐"
           scrollable
         />
       )}
@@ -86,7 +85,6 @@ export default async function HomePage() {
           title="New Arrivals"
           subtitle="Fresh styles just landed — be the first to grab them!"
           viewAllLink="/shop?new=true"
-          emoji="🆕"
           scrollable
         />
       )}
@@ -98,10 +96,9 @@ export default async function HomePage() {
       {saleProducts && saleProducts.length > 0 && (
         <FeaturedProducts
           products={saleProducts}
-          title="On Sale Now 🔥"
+          title="On Sale Now"
           subtitle="Limited time deals — grab them before they're gone!"
           viewAllLink="/shop?sale=true"
-          emoji="🔥"
           scrollable
         />
       )}
@@ -113,7 +110,6 @@ export default async function HomePage() {
           title="Best Sellers"
           subtitle="What other parents across Pakistan are loving right now"
           viewAllLink="/shop?bestseller=true"
-          emoji="🏆"
           scrollable
         />
       )}

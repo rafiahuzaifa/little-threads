@@ -59,22 +59,18 @@ export function SaleBanner({ endDate, discount = 30, minOrderAmount = 2000 }: Sa
           <div className="absolute -bottom-8 -left-8 w-36 h-36 bg-white/10 rounded-full" />
           <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-white/5 rounded-full" />
 
-          {/* Floating emojis */}
-          <div className="absolute top-4 right-20 text-3xl animate-wiggle pointer-events-none hidden md:block">🏷️</div>
-          <div className="absolute bottom-4 left-24 text-2xl animate-float pointer-events-none hidden md:block">✨</div>
-
           <div className="relative z-10 p-7 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Content */}
             <div className="text-white text-center md:text-left">
-              <div className="inline-flex items-center gap-2 bg-sunshine-500 text-charcoal text-sm font-nunito font-black px-4 py-1.5 rounded-full mb-4 shadow-yellow">
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-sm font-nunito font-bold px-4 py-1.5 rounded-full mb-4 border border-white/30">
                 <Tag size={14} />
-                🔥 MEGA SALE
+                LIMITED TIME SALE
               </div>
               <h2 className="font-fredoka text-5xl md:text-6xl lg:text-7xl mb-3 drop-shadow-sm leading-none">
                 UP TO {discount}% OFF
               </h2>
               <p className="text-white/90 font-nunito text-lg mb-6 md:mb-0">
-                On orders above {formatPrice(minOrderAmount)} · Free shipping included!
+                On orders above {formatPrice(minOrderAmount)} · Free shipping included
               </p>
               <Link
                 href="/shop?sale=true"

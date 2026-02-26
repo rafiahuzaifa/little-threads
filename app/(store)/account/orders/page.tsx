@@ -75,7 +75,7 @@ export default function OrdersPage() {
             href="/shop"
             className="inline-block bg-gradient-pink text-white px-8 py-3 rounded-full font-nunito font-bold hover:shadow-pink transition-all"
           >
-            Start Shopping 🛍️
+            Start Shopping
           </Link>
         </div>
       ) : (

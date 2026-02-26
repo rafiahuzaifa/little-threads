@@ -63,7 +63,7 @@ export default function WishlistPage() {
       stock: 10,
       slug: product.slug?.current || '',
     })
-    toast.success('Added to cart! 🛍️')
+    toast.success('Added to cart!')
   }
 
   return (
@@ -91,7 +91,7 @@ export default function WishlistPage() {
             href="/shop"
             className="inline-block bg-gradient-pink text-white px-8 py-3 rounded-full font-nunito font-bold hover:shadow-pink transition-all"
           >
-            Browse Shop 🛍️
+            Browse Shop
           </Link>
         </div>
       ) : (

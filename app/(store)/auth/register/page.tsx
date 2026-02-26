@@ -65,21 +65,14 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen bg-gradient-hero-2 flex items-center justify-center px-4 py-12 relative overflow-hidden">
-      {/* Floating decorations */}
-      <div className="absolute top-10 right-10 text-4xl animate-float pointer-events-none select-none">🎈</div>
-      <div className="absolute top-20 left-16 text-3xl animate-float-delay pointer-events-none select-none">🌟</div>
-      <div className="absolute bottom-16 right-20 text-4xl animate-float-delay-2 pointer-events-none select-none">✨</div>
-      <div className="absolute bottom-10 left-10 text-3xl animate-float pointer-events-none select-none">🎀</div>
-
       {/* Card */}
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-block">
             <span className="font-fredoka text-4xl text-bubblegum-500">Little Threads</span>
-            <span className="text-2xl ml-1">🧵</span>
           </Link>
-          <p className="font-nunito text-gray-500 mt-2">Join the Little Threads family! 🌟</p>
+          <p className="font-nunito text-gray-500 mt-2">Join the Little Threads family!</p>
         </div>
 
         <div className="bg-white rounded-3xl shadow-float p-8">
@@ -210,7 +203,7 @@ export default function RegisterPage() {
                   Creating account...
                 </span>
               ) : (
-                'Create Account 🎉'
+                'Create Account'
               )}
             </button>
           </form>
@@ -219,7 +212,7 @@ export default function RegisterPage() {
           <p className="text-center text-sm text-gray-500 font-nunito mt-6">
             Already have an account?{' '}
             <Link href="/auth/login" className="text-bubblegum-500 font-bold hover:text-bubblegum-600">
-              Sign in ✨
+              Sign in
             </Link>
           </p>
         </div>

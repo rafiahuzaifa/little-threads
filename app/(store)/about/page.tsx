@@ -57,10 +57,7 @@ export default function AboutPage() {
     <div className="overflow-hidden">
       {/* Hero */}
       <section className="relative bg-gradient-hero py-20 px-4 text-center overflow-hidden">
-        <div className="absolute top-8 left-12 text-5xl animate-float pointer-events-none">🌟</div>
-        <div className="absolute top-16 right-16 text-4xl animate-float-delay pointer-events-none">🎀</div>
-        <div className="absolute bottom-8 left-1/4 text-3xl animate-float-delay-2 pointer-events-none">✨</div>
-        <div className="absolute bottom-12 right-1/4 text-4xl animate-float pointer-events-none">🌈</div>
+
 
         <div className="container mx-auto max-w-3xl relative">
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-soft">
@@ -82,7 +79,7 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-fredoka text-3xl text-charcoal mb-5">
-              From a Small Dream to Pakistan's Favourite Kids Store 🧵
+              From a Small Dream to Pakistan's Favourite Kids Store
             </h2>
             <div className="space-y-4 font-poppins text-gray-600 leading-relaxed">
               <p>
@@ -113,14 +110,11 @@ export default function AboutPage() {
                   <p className="text-xs text-white/80 font-nunito">Cities</p>
                 </div>
                 <div>
-                  <p className="font-fredoka text-3xl">4.9★</p>
+                  <p className="font-fredoka text-3xl">4.9</p>
                   <p className="text-xs text-white/80 font-nunito">Rating</p>
                 </div>
               </div>
             </div>
-            {/* Floating emojis */}
-            <div className="absolute -top-4 -right-4 text-3xl animate-float">🎈</div>
-            <div className="absolute -bottom-4 -left-4 text-3xl animate-float-delay">⭐</div>
           </div>
         </div>
       </section>
@@ -152,7 +146,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 px-4 text-center bg-gradient-hero">
         <div className="container mx-auto max-w-2xl">
-          <h2 className="font-fredoka text-4xl text-charcoal mb-4">Ready to Dress Your Little Star? ✨</h2>
+          <h2 className="font-fredoka text-4xl text-charcoal mb-4">Ready to Dress Your Little Star?</h2>
           <p className="text-gray-500 font-poppins mb-8">
             Browse our collection and find the perfect outfit for every occasion.
           </p>
@@ -160,7 +154,7 @@ export default function AboutPage() {
             href="/shop"
             className="inline-block bg-gradient-pink text-white px-10 py-4 rounded-full font-nunito font-black text-lg hover:shadow-pink-lg transition-all hover:scale-105"
           >
-            Shop Now 🛍️
+            Shop Now
           </Link>
         </div>
       </section>

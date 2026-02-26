@@ -42,7 +42,7 @@ export default function LoginPage() {
     if (result?.error) {
       toast.error('Invalid email or password')
     } else {
-      toast.success('Welcome back! 🎉')
+      toast.success('Welcome back!')
       router.push(callbackUrl)
       router.refresh()
     }
@@ -55,22 +55,14 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-gradient-hero flex items-center justify-center px-4 py-12 relative overflow-hidden">
-      {/* Floating decorations */}
-      <div className="absolute top-10 left-10 text-4xl animate-float pointer-events-none select-none">🌟</div>
-      <div className="absolute top-20 right-16 text-3xl animate-float-delay pointer-events-none select-none">🎀</div>
-      <div className="absolute bottom-16 left-20 text-4xl animate-float-delay-2 pointer-events-none select-none">⭐</div>
-      <div className="absolute bottom-10 right-10 text-3xl animate-float pointer-events-none select-none">✨</div>
-      <div className="absolute top-1/2 left-5 text-2xl animate-float-slow pointer-events-none select-none opacity-40">🌈</div>
-
       {/* Card */}
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-block">
             <span className="font-fredoka text-4xl text-bubblegum-500">Little Threads</span>
-            <span className="text-2xl ml-1">🧵</span>
           </Link>
-          <p className="font-nunito text-gray-500 mt-2">Welcome back, shopaholic! 👋</p>
+          <p className="font-nunito text-gray-500 mt-2">Welcome back!</p>
         </div>
 
         <div className="bg-white rounded-3xl shadow-float p-8">
@@ -160,7 +152,7 @@ export default function LoginPage() {
                   Signing in...
                 </span>
               ) : (
-                'Sign In 🚀'
+                'Sign In'
               )}
             </button>
           </form>
@@ -172,7 +164,7 @@ export default function LoginPage() {
               href="/auth/register"
               className="text-bubblegum-500 font-bold hover:text-bubblegum-600"
             >
-              Create an account ✨
+              Create an account
             </Link>
           </p>
         </div>

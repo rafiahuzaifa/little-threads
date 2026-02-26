@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronLeft, ChevronRight, ShoppingBag, Sparkles } from 'lucide-react'
+import { ChevronLeft, ChevronRight, ShoppingBag, Shirt } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { urlForImage } from '@/sanity/lib/image'
 import type { HeroBanner } from '@/types'
@@ -18,8 +18,6 @@ const Hero3DScene = dynamic(
 interface HeroSection3DProps {
   banners: HeroBanner[]
 }
-
-const FLOATING_ITEMS = ['🌟', '🎀', '⭐', '✨', '🌈', '🎈', '🦋', '💫', '🎉']
 
 export function HeroSection3D({ banners }: HeroSection3DProps) {
   const [current, setCurrent] = useState(0)
@@ -55,44 +53,15 @@ export function HeroSection3D({ banners }: HeroSection3DProps) {
   if (!banners || banners.length === 0) {
     return (
       <div className="relative w-full h-[480px] md:h-[560px] bg-gradient-hero rounded-3xl overflow-hidden">
-        {/* 3D Background Scene */}
         <Hero3DScene />
-
-        {/* Parallax floating emojis */}
-        {FLOATING_ITEMS.map((emoji, i) => (
-          <motion.div
-            key={i}
-            className="absolute text-3xl md:text-4xl pointer-events-none select-none"
-            style={{
-              top: `${15 + (i * 10) % 70}%`,
-              left: `${5 + (i * 13) % 90}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              rotate: [-5, 5, -5],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              delay: i * 0.3,
-            }}
-            drag
-            dragConstraints={{ top: -50, bottom: 50, left: -50, right: 50 }}
-          >
-            {emoji}
-          </motion.div>
-        ))}
-
-        {/* Content */}
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center px-6">
             <motion.div
-              className="text-8xl mb-5 block"
-              animate={{ y: [0, -15, 0], rotate: [-5, 5, -5] }}
+              className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-6"
+              animate={{ y: [0, -12, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
             >
-              🧒
+              <Shirt size={48} className="text-white" strokeWidth={1.5} />
             </motion.div>
             <motion.h1
               className="font-fredoka text-5xl md:text-7xl text-charcoal mb-4 leading-tight"
@@ -109,7 +78,7 @@ export function HeroSection3D({ banners }: HeroSection3DProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              Adorable clothes for your little superstars ✨
+              Premium kids clothing for every occasion
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -122,11 +91,6 @@ export function HeroSection3D({ banners }: HeroSection3DProps) {
               >
                 <ShoppingBag size={22} />
                 Shop Now
-                <motion.span
-                  className="absolute -top-1 -right-1 w-3 h-3 bg-sunshine-400 rounded-full"
-                  animate={{ scale: [1, 1.5, 1] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                />
               </Link>
             </motion.div>
           </div>
@@ -190,32 +154,6 @@ export function HeroSection3D({ banners }: HeroSection3DProps) {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-[5]" />
 
-        {/* Floating 3D Emojis (parallax) */}
-        <motion.div
-          className="absolute top-10 right-12 text-4xl pointer-events-none hidden md:block z-[6]"
-          style={{ transform: `translate(${mousePos.x * -0.8}px, ${mousePos.y * -0.5}px)` }}
-          animate={{ y: [0, -15, 0], rotate: [-5, 5, -5] }}
-          transition={{ duration: 3, repeat: Infinity }}
-        >
-          🌟
-        </motion.div>
-        <motion.div
-          className="absolute top-24 right-32 text-3xl pointer-events-none hidden md:block z-[6]"
-          style={{ transform: `translate(${mousePos.x * -1.2}px, ${mousePos.y * -0.8}px)` }}
-          animate={{ y: [0, -20, 0], rotate: [5, -5, 5] }}
-          transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-        >
-          ✨
-        </motion.div>
-        <motion.div
-          className="absolute bottom-20 right-24 text-3xl pointer-events-none hidden md:block z-[6]"
-          style={{ transform: `translate(${mousePos.x * -0.6}px, ${mousePos.y * 0.4}px)` }}
-          animate={{ y: [0, -12, 0] }}
-          transition={{ duration: 3.5, repeat: Infinity, delay: 1 }}
-        >
-          🎀
-        </motion.div>
-
         {/* Content */}
         <div className="absolute inset-0 flex items-center z-10">
           <div className="container mx-auto max-w-7xl px-6 md:px-12">
@@ -230,12 +168,11 @@ export function HeroSection3D({ banners }: HeroSection3DProps) {
               >
                 {banner.badgeText && (
                   <motion.span
-                    className="inline-flex items-center gap-2 bg-sunshine-400 text-charcoal text-sm font-nunito font-black px-5 py-1.5 rounded-full mb-5 shadow-yellow"
+                    className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-sm font-nunito font-bold px-5 py-1.5 rounded-full mb-5 border border-white/30"
                     initial={{ scale: 0, rotate: -10 }}
                     animate={{ scale: 1, rotate: 0 }}
                     transition={{ delay: 0.2, type: 'spring' }}
                   >
-                    <Sparkles size={14} />
                     {banner.badgeText}
                   </motion.span>
                 )}
@@ -268,7 +205,7 @@ export function HeroSection3D({ banners }: HeroSection3DProps) {
                         whileHover={{ x: '200%' }}
                         transition={{ duration: 0.6 }}
                       />
-                      <ShoppingBag size={20} className="group-hover:animate-bounce" />
+                      <ShoppingBag size={20} />
                       {banner.buttonText}
                     </Link>
                   </motion.div>
@@ -278,7 +215,7 @@ export function HeroSection3D({ banners }: HeroSection3DProps) {
           </div>
         </div>
 
-        {/* Slide indicators */}
+        {/* Slide controls */}
         {banners.length > 1 && (
           <>
             <motion.button

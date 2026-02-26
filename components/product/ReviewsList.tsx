@@ -85,7 +85,7 @@ export function ReviewsList({ reviews, averageRating, reviewCount }: ReviewsList
         </>
       ) : (
         <div className="text-center py-10 bg-gray-50 rounded-2xl">
-          <span className="text-4xl mb-3 block">⭐</span>
+          <Star size={40} className="text-gray-300 mx-auto mb-3" />
           <p className="text-gray-500">No reviews yet. Be the first to review this product!</p>
         </div>
       )}

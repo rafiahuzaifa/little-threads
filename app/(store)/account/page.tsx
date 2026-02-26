@@ -66,10 +66,8 @@ export default function AccountDashboard() {
     <div className="container mx-auto max-w-4xl px-4 py-8">
       {/* Greeting */}
       <div className="bg-gradient-pink rounded-3xl p-6 mb-8 relative overflow-hidden">
-        <div className="absolute top-2 right-4 text-3xl animate-float pointer-events-none">🌟</div>
-        <div className="absolute bottom-2 right-16 text-2xl animate-float-delay pointer-events-none">✨</div>
         <h1 className="font-fredoka text-3xl text-white mb-1">
-          Hey, {session?.user?.name?.split(' ')[0]}! 👋
+          Hey, {session?.user?.name?.split(' ')[0]}!
         </h1>
         <p className="text-white/80 font-nunito">Welcome to your Little Threads account</p>
       </div>
@@ -123,7 +121,7 @@ export default function AccountDashboard() {
               href="/shop"
               className="inline-block mt-3 bg-bubblegum-500 text-white px-5 py-2 rounded-full font-nunito font-bold text-sm hover:bg-bubblegum-600 transition-colors"
             >
-              Start Shopping 🛍️
+              Start Shopping
             </Link>
           </div>
         ) : (

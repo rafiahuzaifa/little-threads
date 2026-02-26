@@ -47,8 +47,7 @@ export function AddReviewForm({ productId }: AddReviewFormProps) {
   if (submitted) {
     return (
       <div className="bg-green-50 rounded-2xl p-6 text-center">
-        <span className="text-4xl mb-2 block">🎉</span>
-        <p className="font-semibold text-green-700">Thank you for your review!</p>
+          <p className="font-semibold text-green-700">Thank you for your review!</p>
         <p className="text-sm text-green-600 mt-1">It will appear after approval.</p>
       </div>
     )

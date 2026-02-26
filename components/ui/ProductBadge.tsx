@@ -10,15 +10,15 @@ interface ProductBadgeProps {
 
 const badgeConfig: Record<BadgeType, { label: string; className: string }> = {
   sale: { label: 'Sale', className: 'bg-bubblegum-500 text-white shadow-pink' },
-  new: { label: '✨ New', className: 'bg-mintgreen-500 text-white shadow-green' },
-  bestseller: { label: '🏆 Top Pick', className: 'bg-sunshine-500 text-charcoal shadow-yellow' },
-  featured: { label: '⭐ Featured', className: 'bg-lavender-500 text-white shadow-purple' },
+  new: { label: 'New', className: 'bg-mintgreen-500 text-white shadow-green' },
+  bestseller: { label: 'Top Pick', className: 'bg-sunshine-500 text-charcoal shadow-yellow' },
+  featured: { label: 'Featured', className: 'bg-lavender-500 text-white shadow-purple' },
   outofstock: { label: 'Sold Out', className: 'bg-gray-400 text-white' },
 }
 
 export function ProductBadge({ type, className, discount }: ProductBadgeProps) {
   const config = badgeConfig[type]
-  const label = type === 'sale' && discount ? `🔥 -${discount}%` : config.label
+  const label = type === 'sale' && discount ? `-${discount}%` : config.label
 
   return (
     <span

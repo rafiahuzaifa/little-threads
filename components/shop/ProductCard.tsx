@@ -53,7 +53,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
         stock: product.stock,
         slug: product.slug.current,
       })
-      toast.success(`Added to cart! 🛍️`)
+      toast.success(`Added to cart!`)
       setTimeout(() => setIsAdding(false), 600)
     } else {
       window.location.href = `/shop/${product.slug.current}`
@@ -73,7 +73,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
       image: primaryImage,
       isSale: product.isSale,
     })
-    toast.success(inWishlist ? 'Removed from wishlist' : '❤️ Added to wishlist!')
+    toast.success(inWishlist ? 'Removed from wishlist' : 'Added to wishlist!')
     setTimeout(() => setIsWishing(false), 400)
   }
 

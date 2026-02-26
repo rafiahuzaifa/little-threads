@@ -8,7 +8,6 @@ interface FeaturedProductsProps {
   subtitle?: string
   viewAllLink?: string
   scrollable?: boolean
-  emoji?: string
 }
 
 export function FeaturedProducts({
@@ -17,7 +16,6 @@ export function FeaturedProducts({
   subtitle = 'Handpicked just for you',
   viewAllLink = '/shop',
   scrollable = false,
-  emoji = '✨',
 }: FeaturedProductsProps) {
   if (!products || products.length === 0) return null
 
@@ -27,7 +25,7 @@ export function FeaturedProducts({
         <div className="flex items-start justify-between mb-7">
           <div>
             <h2 className="font-fredoka text-3xl md:text-4xl text-charcoal">
-              {emoji} {title}
+              {title}
             </h2>
             {subtitle && (
               <p className="text-gray-500 font-poppins text-sm mt-1">{subtitle}</p>

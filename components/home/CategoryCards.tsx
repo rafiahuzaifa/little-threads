@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { urlForImage } from '@/sanity/lib/image'
+import { Tag } from 'lucide-react'
 import type { Category } from '@/types'
 
 interface CategoryCardsProps {
@@ -8,14 +9,14 @@ interface CategoryCardsProps {
 }
 
 const CARD_STYLES = [
-  { bg: 'bg-gradient-pink', emoji: '👗', textColor: 'text-white' },
-  { bg: 'bg-gradient-blue', emoji: '👕', textColor: 'text-white' },
-  { bg: 'bg-gradient-sunshine', emoji: '🧸', textColor: 'text-charcoal' },
-  { bg: 'bg-gradient-green', emoji: '🎀', textColor: 'text-white' },
-  { bg: 'bg-gradient-lavender', emoji: '⭐', textColor: 'text-white' },
-  { bg: 'bg-gradient-coral', emoji: '🌟', textColor: 'text-white' },
-  { bg: 'bg-gradient-mint', emoji: '🎈', textColor: 'text-white' },
-  { bg: 'bg-gradient-pink', emoji: '🦋', textColor: 'text-white' },
+  { bg: 'bg-gradient-pink', textColor: 'text-white' },
+  { bg: 'bg-gradient-blue', textColor: 'text-white' },
+  { bg: 'bg-gradient-sunshine', textColor: 'text-charcoal' },
+  { bg: 'bg-gradient-green', textColor: 'text-white' },
+  { bg: 'bg-gradient-lavender', textColor: 'text-white' },
+  { bg: 'bg-gradient-coral', textColor: 'text-white' },
+  { bg: 'bg-gradient-mint', textColor: 'text-white' },
+  { bg: 'bg-gradient-pink', textColor: 'text-white' },
 ]
 
 export function CategoryCards({ categories }: CategoryCardsProps) {
@@ -63,7 +64,7 @@ export function CategoryCards({ categories }: CategoryCardsProps) {
                       sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 16vw"
                     />
                   ) : (
-                    <span className="text-4xl md:text-5xl drop-shadow-sm">{style.emoji}</span>
+                    <Tag size={28} className="text-white/80" strokeWidth={1.5} />
                   )}
 
                   {/* Hover overlay */}

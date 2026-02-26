@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Facebook, Instagram, Phone, Mail, MapPin, MessageCircle, Heart } from 'lucide-react'
+import { Facebook, Instagram, Phone, Mail, MapPin, MessageCircle, Heart, Truck, CreditCard, RotateCcw, ShieldCheck } from 'lucide-react'
 import type { SiteSettings } from '@/types'
 
 interface FooterProps {
@@ -34,7 +34,7 @@ export function Footer({ settings }: FooterProps) {
               </span>
             </Link>
             <p className="text-sm text-gray-400 mb-5 leading-relaxed font-poppins">
-              {settings?.tagline || 'Adorable clothes for your little ones. Quality, comfort, and style for every occasion.'}
+              {settings?.tagline || 'Premium kids clothing for every occasion. Quality, comfort, and style for every stage of growth.'}
             </p>
             <div className="flex gap-2">
               {settings?.facebookUrl && (
@@ -75,8 +75,8 @@ export function Footer({ settings }: FooterProps) {
               {[
                 { href: '/', label: 'Home' },
                 { href: '/shop', label: 'Shop All' },
-                { href: '/shop?sale=true', label: '🔥 Sale Items' },
-                { href: '/shop?new=true', label: '✨ New Arrivals' },
+                { href: '/shop?sale=true', label: 'Sale Items' },
+                { href: '/shop?new=true', label: 'New Arrivals' },
                 { href: '/about', label: 'About Us' },
                 { href: '/contact', label: 'Contact' },
               ].map((link) => (
@@ -94,12 +94,12 @@ export function Footer({ settings }: FooterProps) {
             <h3 className="font-nunito font-bold text-white mb-4">Categories</h3>
             <ul className="space-y-2.5">
               {[
-                { href: '/category/boys', label: '👦 Boys Clothing' },
-                { href: '/category/girls', label: '👧 Girls Clothing' },
-                { href: '/shop?gender=Unisex', label: '🌈 Unisex' },
-                { href: '/shop?age=Newborn', label: '👶 Newborn' },
-                { href: '/shop?age=Infant', label: '🍼 Infant (1-12M)' },
-                { href: '/shop?age=Toddler', label: '🐣 Toddler (1-3Y)' },
+                { href: '/category/boys', label: 'Boys Clothing' },
+                { href: '/category/girls', label: 'Girls Clothing' },
+                { href: '/shop?gender=Unisex', label: 'Unisex' },
+                { href: '/shop?age=Newborn', label: 'Newborn (0–3M)' },
+                { href: '/shop?age=Infant', label: 'Infant (3–12M)' },
+                { href: '/shop?age=Toddler', label: 'Toddler (1–3Y)' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-gray-400 hover:text-bubblegum-400 transition-colors font-poppins">
@@ -154,13 +154,13 @@ export function Footer({ settings }: FooterProps) {
         {/* Trust Strip */}
         <div className="bg-white/5 rounded-2xl p-4 mb-8 flex flex-wrap gap-4 justify-around items-center border border-white/10">
           {[
-            { icon: '🚚', text: 'Free Delivery above ₨3,000' },
-            { icon: '💵', text: 'Cash on Delivery' },
-            { icon: '↩️', text: '7-Day Easy Returns' },
-            { icon: '🔒', text: 'Secure Payments' },
+            { icon: Truck, text: 'Free Delivery above Rs. 3,000' },
+            { icon: CreditCard, text: 'Cash on Delivery' },
+            { icon: RotateCcw, text: '7-Day Easy Returns' },
+            { icon: ShieldCheck, text: 'Secure Payments' },
           ].map((item) => (
             <div key={item.text} className="flex items-center gap-2 text-sm text-gray-300 font-nunito">
-              <span>{item.icon}</span>
+              <item.icon size={15} className="text-bubblegum-400 shrink-0" strokeWidth={1.8} />
               <span>{item.text}</span>
             </div>
           ))}
@@ -169,10 +169,10 @@ export function Footer({ settings }: FooterProps) {
         {/* Payment Methods */}
         <div className="flex flex-wrap gap-2 justify-center mb-8">
           {[
-            { label: '📱 JazzCash', color: 'bg-orange-500/20 text-orange-300' },
-            { label: '📱 EasyPaisa', color: 'bg-green-500/20 text-green-300' },
-            { label: '🏦 Bank Transfer', color: 'bg-blue-500/20 text-blue-300' },
-            { label: '💵 Cash on Delivery', color: 'bg-yellow-500/20 text-yellow-300' },
+            { label: 'JazzCash', color: 'bg-orange-500/20 text-orange-300' },
+            { label: 'EasyPaisa', color: 'bg-green-500/20 text-green-300' },
+            { label: 'Bank Transfer', color: 'bg-blue-500/20 text-blue-300' },
+            { label: 'Cash on Delivery', color: 'bg-yellow-500/20 text-yellow-300' },
           ].map((method) => (
             <span
               key={method.label}

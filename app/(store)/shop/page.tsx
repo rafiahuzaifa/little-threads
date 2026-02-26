@@ -85,7 +85,7 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
           {searchParams.sale === 'true'
             ? '🔥 Sale Items'
             : searchParams.new === 'true'
-            ? '✨ New Arrivals'
+            ? 'New Arrivals'
             : searchParams.category
             ? categories.find((c) => c.slug.current === searchParams.category)?.title || 'Shop'
             : 'Shop All'}

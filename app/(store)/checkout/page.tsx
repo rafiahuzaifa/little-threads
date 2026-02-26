@@ -195,7 +195,7 @@ export default function CheckoutPage() {
           {/* Shipping Form */}
           <div className="bg-white rounded-2xl p-5 shadow-card">
             <h2 className="font-nunito font-bold text-xl text-[#2D3748] mb-5">
-              📦 Shipping Information
+              Shipping Information
             </h2>
             <ShippingForm
               onSubmit={handlePlaceOrder}
@@ -214,7 +214,7 @@ export default function CheckoutPage() {
             {/* Bank Transfer Info */}
             {paymentMethod === 'Bank Transfer' && (
               <div className="mt-4 bg-blue-50 rounded-xl p-4">
-                <p className="text-sm text-blue-700 font-medium mb-2">📋 Bank Transfer Instructions</p>
+                <p className="text-sm text-blue-700 font-medium mb-2">Bank Transfer Instructions</p>
                 <p className="text-xs text-blue-600">
                   After placing your order, you'll receive bank account details on the confirmation page.
                   Transfer the amount and upload the screenshot to confirm your order.
@@ -225,7 +225,7 @@ export default function CheckoutPage() {
             {/* COD Info */}
             {paymentMethod === 'COD' && (
               <div className="mt-4 bg-green-50 rounded-xl p-4">
-                <p className="text-sm text-green-700 font-medium">✅ Cash on Delivery Selected</p>
+                <p className="text-sm text-green-700 font-medium">Cash on Delivery Selected</p>
                 <p className="text-xs text-green-600 mt-1">
                   Pay cash when your order is delivered. No advance payment required.
                 </p>
@@ -247,7 +247,7 @@ export default function CheckoutPage() {
               </>
             ) : (
               <>
-                🛍️ Place Order — {total.toLocaleString('en-PK', { style: 'currency', currency: 'PKR', minimumFractionDigits: 0 })}
+                Place Order — {total.toLocaleString('en-PK', { style: 'currency', currency: 'PKR', minimumFractionDigits: 0 })}
               </>
             )}
           </button>

@@ -121,7 +121,7 @@ export function CartSummary() {
         <div className="flex justify-between text-sm">
           <span className="text-gray-600">Shipping</span>
           {shipping === 0 ? (
-            <span className="font-medium text-[#4ECDC4]">FREE 🎉</span>
+            <span className="font-medium text-[#4ECDC4]">FREE</span>
           ) : (
             <span className="font-medium text-[#2D3748]">{formatPrice(shipping)}</span>
           )}
@@ -151,9 +151,9 @@ export function CartSummary() {
 
       {/* Trust Badges */}
       <div className="mt-5 flex justify-center gap-4 text-xs text-gray-400">
-        <span>🔒 Secure</span>
-        <span>🚚 Fast Delivery</span>
-        <span>💳 COD Available</span>
+        <span>Secure</span>
+        <span>Fast Delivery</span>
+        <span>COD Available</span>
       </div>
     </div>
   )

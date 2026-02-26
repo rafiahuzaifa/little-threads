@@ -69,9 +69,9 @@ export function Navbar({ settings }: NavbarProps) {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/shop', label: 'Shop' },
-    { href: '/category/boys', label: '👦 Boys' },
-    { href: '/category/girls', label: '👧 Girls' },
-    { href: '/shop?sale=true', label: '🔥 Sale' },
+    { href: '/category/boys', label: 'Boys' },
+    { href: '/category/girls', label: 'Girls' },
+    { href: '/shop?sale=true', label: 'Sale' },
     { href: '/about', label: 'About' },
   ]
 

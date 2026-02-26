@@ -77,7 +77,7 @@ export default function ProfilePage() {
       toast.error(result.error || 'Update failed')
     } else {
       await update({ name: data.name })
-      toast.success('Profile updated! ✨')
+      toast.success('Profile updated!')
       reset({ name: data.name, phone: data.phone || '', currentPassword: '', newPassword: '', confirmNewPassword: '' })
     }
   }

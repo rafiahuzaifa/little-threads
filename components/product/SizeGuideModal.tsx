@@ -37,7 +37,7 @@ export function SizeGuideModal() {
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-auto">
             <div className="flex items-center justify-between p-5 border-b">
               <h2 className="font-nunito font-bold text-xl text-[#2D3748]">
-                📏 Children's Size Guide (Pakistan)
+                Children's Size Guide (Pakistan)
               </h2>
               <button
                 onClick={() => setIsOpen(false)}

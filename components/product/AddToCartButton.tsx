@@ -56,7 +56,7 @@ export function AddToCartButton({
     })
 
     setIsAdded(true)
-    toast.success(`${name} added to cart! 🛍️`)
+    toast.success(`${name} added to cart!`)
     setTimeout(() => setIsAdded(false), 2000)
   }
 

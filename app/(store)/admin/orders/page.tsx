@@ -115,7 +115,7 @@ export default async function AdminOrdersPage({
                     <td className="px-5 py-3 font-semibold text-xs">{formatPrice(order.totalPrice)}</td>
                     <td className="px-5 py-3 text-xs">
                       <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold ${order.isPaid ? 'bg-green-100 text-green-700' : 'bg-red-50 text-red-600'}`}>
-                        {order.paymentMethod} {order.isPaid ? '✓' : '⏳'}
+                        {order.paymentMethod} · {order.isPaid ? 'Paid' : 'Pending'}
                       </span>
                     </td>
                     <td className="px-5 py-3">

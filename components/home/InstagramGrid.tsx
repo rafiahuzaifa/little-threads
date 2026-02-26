@@ -3,12 +3,12 @@ import { Instagram } from 'lucide-react'
 
 // Static placeholder Instagram grid — replace with real IG API or images
 const IG_POSTS = [
-  { id: 1, emoji: '👗', bg: 'bg-gradient-to-br from-pink-200 to-bubblegum-300', likes: '1.2k', caption: 'New summer collection is here! 🌸' },
-  { id: 2, emoji: '👦', bg: 'bg-gradient-to-br from-sky-200 to-skyblue-300', likes: '987', caption: 'Boys looking sharp this season! ⚡' },
-  { id: 3, emoji: '🌟', bg: 'bg-gradient-to-br from-yellow-200 to-sunshine-300', likes: '2.1k', caption: 'Sale is LIVE! Up to 40% off 🔥' },
-  { id: 4, emoji: '👶', bg: 'bg-gradient-to-br from-green-200 to-mintgreen-300', likes: '856', caption: 'Newborn essentials are restocked! 🍼' },
-  { id: 5, emoji: '🎒', bg: 'bg-gradient-to-br from-purple-200 to-lavender-300', likes: '1.5k', caption: 'School season ready — shop uniforms! 📚' },
-  { id: 6, emoji: '✨', bg: 'bg-gradient-to-br from-orange-200 to-coral-300', likes: '3.2k', caption: 'Happy customers make our day! 💕' },
+  { id: 1, bg: 'bg-gradient-to-br from-pink-200 to-bubblegum-300', likes: '1.2k', label: 'Summer Collection' },
+  { id: 2, bg: 'bg-gradient-to-br from-sky-200 to-skyblue-300', likes: '987', label: 'Boys Collection' },
+  { id: 3, bg: 'bg-gradient-to-br from-yellow-200 to-sunshine-300', likes: '2.1k', label: 'Sale Up to 40%' },
+  { id: 4, bg: 'bg-gradient-to-br from-green-200 to-mintgreen-300', likes: '856', label: 'Newborn Essentials' },
+  { id: 5, bg: 'bg-gradient-to-br from-purple-200 to-lavender-300', likes: '1.5k', label: 'School Uniforms' },
+  { id: 6, bg: 'bg-gradient-to-br from-orange-200 to-coral-300', likes: '3.2k', label: 'Customer Moments' },
 ]
 
 export function InstagramGrid() {
@@ -45,16 +45,11 @@ export function InstagramGrid() {
               target="_blank"
               className={`group relative aspect-square rounded-2xl overflow-hidden ${post.bg} cursor-pointer`}
             >
-              {/* Emoji content */}
-              <div className="absolute inset-0 flex items-center justify-center text-5xl md:text-6xl opacity-70 group-hover:scale-110 transition-transform duration-300">
-                {post.emoji}
-              </div>
-
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 rounded-2xl flex items-center justify-center opacity-0 group-hover:opacity-100">
                 <div className="text-center text-white">
                   <Instagram size={20} className="mx-auto mb-1" />
-                  <p className="text-xs font-nunito font-bold">❤️ {post.likes}</p>
+                  <p className="text-xs font-nunito font-bold">{post.likes} likes</p>
                 </div>
               </div>
             </Link>
